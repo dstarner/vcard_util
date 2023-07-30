@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "/Users/<USER>/.local/share/virtualenvs/<VIRTUALENV>/bin/python",
+    "python.linting.flake8Enabled": true,
+    "terminal.integrated.env.osx": {
+      "PIPENV_VERBOSITY": "-1"
+    },
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  }
+  

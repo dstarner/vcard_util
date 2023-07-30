@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "vcard-util"
+version = "0.1.0"
+description = "Python library for working with Virtual Contact Files (vCards)"
+authors = ["Dan Starner <github@danstarner.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [{include = "vcard_util"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.280"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+fix = true
+line-length = 120
+ignore = [
+    "D203", # one-blank-line-before-class, using D211 `no-blank-line-before-class` instead
+    "D212", # multi-line-summary-first-line, using D213 `multi-line-summary-second-line` instead
+]
+select = [
+    # https://beta.ruff.rs/docs/rules/
+    "D", # pydocstyle
+    "F", # PyFlakes
+    "E", "W", # pycodestyle
+    "C90", #mccabe
+    "I", # isort
+    "BLE", # flake8-blind-except
+    "FBT", # flake8-boolean-trap
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "Q", # flake8-quotes
+    "PL", # pylint
+    "RUF", # ruf
+]
